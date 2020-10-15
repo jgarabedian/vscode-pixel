@@ -1,8 +1,9 @@
 {
     "name": "pixel",
-    "displayName": "pixel",
-    "description": "Pixel",
+    "displayName": "Pixel",
+    "description": "A Pixel extension for VSCode",
     "version": "0.0.1",
+    "publisher": "jgarabedian",
     "engines": {
         "vscode": "^1.50.0"
     },
