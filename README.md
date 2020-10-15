@@ -1,6 +1,11 @@
 # Pixel README
 
-This extention allows for a user to easily read pixel syntax in VS Code
+This extension allows for a user to easily read pixel syntax in VS Code
+
+## To regex search the reactors for the proper format
+```
+\s{2,}
+```
 
 ## Features
 
@@ -35,6 +40,10 @@ Not all reactors and keywords are captured yet
 
 Beta Test - please be nice
 
-### 0.0.1
+### 0.5.0
+
+- Updated Reactor keywords
+
+### 0.1.0
 
 Initial Beta Release
