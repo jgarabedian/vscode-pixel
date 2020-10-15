@@ -2,7 +2,7 @@
     "name": "pixel",
     "displayName": "Pixel",
     "description": "A Pixel extension for VSCode",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "jgarabedian",
     "engines": {
         "vscode": "^1.50.0"
@@ -11,16 +11,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "pixel",
-            "aliases": ["Pixel", "pixel"],
-            "extensions": [".pixel"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "pixel",
-            "scopeName": "source.pixel",
-            "path": "./syntaxes/pixel.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "pixel",
+                "aliases": [
+                    "Pixel",
+                    "pixel"
+                ],
+                "extensions": [
+                    ".pixel"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "pixel",
+                "scopeName": "source.pixel",
+                "path": "./syntaxes/pixel.tmLanguage.json"
+            }
+        ]
     }
 }
