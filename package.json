@@ -1,0 +1,25 @@
+{
+    "name": "pixel",
+    "displayName": "pixel",
+    "description": "Pixel",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pixel",
+            "aliases": ["Pixel", "pixel"],
+            "extensions": [".pixel"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pixel",
+            "scopeName": "source.pixel",
+            "path": "./syntaxes/pixel.tmLanguage.json"
+        }]
+    }
+}

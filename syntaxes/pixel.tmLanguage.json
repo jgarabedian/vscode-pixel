@@ -1,0 +1,102 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pixel",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#regexps"
+		},
+		{
+			"captures": {
+				"1":{
+					"name": "constant.numeric.pixel"
+				},
+				"2": {
+					"name": "keyword.operator.comparison.pixel"
+				}
+			}
+		},
+		{
+			"match": "\\b\\d+\\b",
+			"name": "constant.numeric.pixel"
+		},
+		{
+			"match": "[!<>]?=|<>|<|>",
+			"name": "keyword.operator.comparison.pixel"
+		},
+		{
+			"match": "-|\\+|/",
+			"name": "keyword.operator.math.pixel"
+		},
+		{
+			"match": "(?i)\\b(DESC|ASC|desc|asc)\\b",
+			"name": "keyword.other.order.pixel"
+		},
+		{
+			"match": "(?i)\\b(access|additionalDataTypes|additionalPixels|allNumeric|alias|app|array|attributes|breaks|clean|cleanUpCloudStorage|cloneId|numClusters|collaborator|column|columns|comment|commentId|concept|concepts|config|connectionString|content|connParams|createIndex|criteria|cronExpression|database|deduplicate|dataType|dataTypeMap|dateTimeField|dbDriver|defaultValue|delimiter|description|dryRun|events|existing|endRow|fileName|filePath|filters|filterWord|frame|frameType|graphLayout|graphName|graphNameId|graphMetamodel|graphTypeId|host|id|image|meta|if|index|insightName|insightOrnament|instance|jobGroup|jobId|jobName|joins|lambda|layout|limit|logicalNames|maintainCols|metamodel|name|newCol|newHeaders|newValue|display|numValue|numValues|offset|options|ornaments|override|panel|panelLabel|position|panelView|panelViewOptions|params|password|port|planner|propFile|randomVals|reactor|recipe|regex|repository|routine|rowCount|rulesMap|schema|sessionId|sheet|sheetName|sort|startRow|statement|sumRange|dual|syncDatabase|table|tables|task|taskId|traversal|useFrameFilters|username|query|qs|url|value|values|variable|scale)\\b",
+			"name": "support.function.string.sql"
+		}
+	],
+	"repository": {
+		"comments":{
+			"patterns": [{
+					"begin": "(^##)",
+					"end": "##",
+					"name": "comment.line.pixel"
+			}]
+		},
+		"regexps": {
+			"patterns": [{
+				"name": "string.regexp",
+				"match": "(?i)\\b(GRID|GRAPH|NATIVE|R|PY|Java|true|false)\\b"
+			}]
+		},
+		"entity":{
+			"patterns": [{
+				"name": "entity.control.pixel",
+				"match": "\\b(TheseAreFromPopulateExpressionSet|ABS|ABSOLUTE|AND|ARRAYLENGTH|ASSTRING|AVERAGE|AVG|CONCAT|CONTAINS|IFERROR|ISEMPTY|LARGE|LEN|MATCH|MAX|MEAN|MEDIAN|MIN|NOTEMPTY|OR|PASTE|PASTE0|POWER|ROUND|SMALL|SUM|SUMIF|SUMIFS|SUMPRODUCT|SUM|Sum|AVERAGE|Average|AVG|Avg|MEAN|Mean|MIN|Min|MAX|Max|MEDIAN|Median|POWER|Power|LARGE|Large|SMALL|Small|ROUND|Round|ABS|Abs|ABSOLUTE|Absolute|MATCH|Match|SUMIF|Sumif|SumIf|SUMIFS|Sumifs|SumIfs|SUMPRODUCT|Sumproduct|SumProduct|AND|And|OR|Or|LEN|Len|IFERROR|Iferror|IfError|NOTEMPTY|Notempty|NotEmpty|ISEMPTY|Isempty|IsEmpty|ASSTRING|Asstring|AsString)\\b"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pixel",
+				"match": "\\b(TheseAreFromCreateReactorHash|API|AddAppCollaborator|AddAppIndex|AddBulkOwlRelationships|AddDefaultInsights|AddFrameFilter|AddInsightComment|AddMetaDescription|AddMetaTags|AddOperationAlias|AddOwlConcept|AddOwlDescription|AddOwlLogicalNames|AddOwlProperty|AddOwlRelationship|AddPanel|AddPanelColorByValue|AddPanelComment|AddPanelConfig|AddPanelEvents|AddPanelFilter|AddPanelIfAbsent|AddPanelOrnaments|AddPanelSort|AddSheet|AllConceptualNames|AppAddProperty|AppEditPropertyDataType|AppInfo|ApplyFormatting|AppRemoveColumn|AppUsers|As|Asset|Assignment|Assimilator|AsTask|AuditDatabase|AutoTaskOptions|Average|BackupApp|badd|BDel|BQ|BrowseAsset|Bupd|CachedPanel|CachedPanelClone|CachedSheet|CancelR|ChangeAppName|ChangeGraphLayout|ChangeOption|ChangeQuery|CheckHeaders|CheckoutVersion|CheckRecommendOptimization|CheckRPackages|CleanUpApps|ClearInsight|Clipboard|Clone|ClosePanel|CloseSheet|CLPModel|ClusterGraph|Coalesce|Code|CodeExec|CodeLambda|Collect|CollectAll|CollectGGPlot|CollectGraph|CollectMeta|CollectPivot|CollectPivotR|CollectSeaborn|CommitAsset|Convert|CopyAppRepo|CopyInsight|Count|CreateAsset|CreateEmbeddedNeo4jDatabase|CreateExternalDSEGraphDatabase|CreateExternalGraphDatabase|CreateExternalNeo4jDatabase|CreateFrame|CreateJanusGraphDatabase|CreateNLPViz|CtrlCAsset|CtrlVAsset|CtrlXAsset|CurrentFrame|CurrentVariables|dRdbmsReplaceDatabaseUploadTable|DashboardInsightConfig|Database|DatabaseColumnUnique|DatabaseProfile|DatabaseRecommendations|DATE|DAY|Delete|DeleteApp|DeleteAppRepo|DeleteAsset|DeleteFrameFilter|DeleteInsight|DeleteInsightCache|DeleteInsightComment|DeleteMetaTags|DeleteUserAsset|DirectJDBCConnection|Distinct|DownloadAsset|DropAppRepo|DropBoxFileRetriever|DropBoxListFiles|DropBoxUploader|DropInsight|EditOwlConceptConceptualName|EditOwlConceptDataType|EditOwlDescription|EditOwlLogicalNames|EditOwlPropertyConceptualName|EditOwlPropertyDataType|EmbeddedRoutine|EmbeddedScript|EmptyData|EscapeAsset|ExecQuery|ExportApp|ExternalDatabaseProfile|ExternalJdbcSchema|ExternalJdbcTablesAndViews|ExtractAppMeta|FederationBestMatches|FederationBlend|FileRead|Filter|FilterLambda|FindDirectOwlRelationships|FindIndirectOwlRelationships|FindSemanticColumnOwlRelationships|FindSemanticInstanceOwlRelationships|FlatMapLambda|Format|Frame|FrameCache|FrameFilterModel|FrameFilterModelFilteredValues|FrameFilterModelNumericRange|FrameFilterModelVisibleValues|FrameHeaderExists|FrameHeaders|FrameType|FuzzyMatches|FuzzyMerge|GenerateEmptyApp|GenerateFrameFromPyVariable|GenerateFrameFromRVariable|GenerateH2FrameFromRVariable|GenerateXRayHashing|GenerateXRayMatching|Generic|GenericSelectorFunction|GetAppInsights|GetAppWidgets|GetAsset|GetAssetComment|GetAvailableTags|GetConceptProperties|GetCSVSchema|GetCurrentRecipe|GetDatabaseConcepts|GetDatabaseConnections|GetDatabaseList|GetDatabaseMetamodel|GetDatabasesByDescription|GetDatabaseSelectors|GetDatabaseTableStructure|GetDQRules|GetDSEGraphMetaModel|GetDSEGraphProperties|GetExcelForm|GetExternalSchema|GetFrameDatabaseJoins|GetFrameFilters|GetFrames|GetGraphMetaModel|GetGraphProperties|GetImageAsset|GetInsightComments|GetInsightDatasources|GetInsights|GetJanusGraphMetaModel|GetJanusGraphProperties|GetLocalSchema|GetMetaDescription|GetMetaTags|GetNeo4jMetamodel|GetNeo4jProperties|GetNumTable|GetOptimizedRecipe|GetOwlDescriptions|GetOwlDictionary|GetOwlLogicalNames|GetOwlMetamodel|GetPanelColorByValue|GetPanelId|GetPhysicalToLogicalMapping|GetPhysicalToPhysicalMapping|GetPlaysheetParams|GetRequest|GetRFResults|GetSpecificConceptProperties|GetSpecificInsightMeta|GetSurveyMonkeySurveys|GetTableHeader|GetTraversalOptions|GetUserInfo|GetXLSchema|GetXrayConfigFile|GetXrayConfigList|GitClone|GitInit|GitStatus|GitVersion|GoogleFileRetriever|GoogleListFiles|GoogleUploader|GrabScalarElement|GraphPlan|GreedyJson|GreedyJsonProcessor|Group|GroupBy|GroupConcat|HasDuplicates|Having|Help|If|IfError|ImageCapture|ImplicitFilterOverride|Import|InitAppRepo|Insert|InsightHandle|InsightMetamodel|InsightPanelIds|InsightRecipe|IsAppEnabled|IsGit|Iterate|Java|JdbcSource|Job|Join|LevelMaker|Limit|ListAllJobs|ListAppCollaborators|ListAppRemotes|ListUserApps|LoadClient|LoadInsight|Login|Lower|LSASpaceColumnLearned|MakeDirectory|MakeInsightMosfet|Map|MapLambda|MapList|MapMap|Max|Mean|Median|Merge|Min|ModifyInsightComment|ModifyInsightDatasource|Month|MoveUserAsset|MyApps|NaturalLanguageSearch|Neg|NegEvaluator|NewDir|NLPInstanceCache|NLSQueryHelper|NodeDetails|Offset|OneDriveFileRetriever|OneDriveListFiles|OneDriveUploader|OpAbsolute|OpAnd|OpArrayLength|OpAsString|OpConcat|OpContains|OpenApp|OpenEmptyInsight|OpenInsight|OpenOptimizedInsight|OpenTab|OpFilter|OpIsEmpty|OpLarge|OpLen|OpMatch|OpMax|OpMean|OpMedian|OpMin|OpNotEmpty|OpOr|OpPaste|OpPaste0|OpPower|OpRound|OpSmall|OpSum|OpSumIf|OpSumIfs|OpSumProduct|Order|Panel|PanelExists|Parent2Validator|ParentValidator|ParseMetamodel|PCol|PixelSource|PostRequest|PowAssimilator|Pragma|PredictDataTypes|PredictExcelDataTypes|PredictExcelRangeMetadata|PredictMetamodel|PredictOwlDescription|PredictOwlLogicalNames|PredictViz|ProfileProcessor|ProfileValidator|ProviderProcessor|ProviderValidator|PSelect|Purge|PushApps|PushAssetToS3|Py|PyNumericalCorrelation|PySource|Query|QueryAll|QueryFilterComponentAnd|QueryFilterComponentOr|QueryFilterComponentSimple|QuerySelectorExpressionAssimilator|QueryTranslator|R|rAlg|Ratio|RClearAllUserRserves|RClearAllUserRservesReactor|RCsvUpload|RdbmsCsvUpload|RdbmsExternalUpload|RdbmsLoaderSheetUpload|RdbmsReplaceDatabaseCsvUpload|RdbmsReplaceDatabaseExcelUpload|RdbmsReplaceDatabaseLoaderSheetUploa|RdbmsUploadExcelData|RdbmsUploadTable|RdbmsUploadTableData|RdfCsvUpload|RDFFileSource|RdfLoaderSheetUpload|RdfReplaceDatabaseCsvUpload|RdfReplaceDatabaseLoaderSheetUpload|RegexFilter|ReloadAppOwl|ReloadInsight|ReloadInsightClasses|RemoveAppCollaborator|RemoveFrame|RemoveFrameFilter|RemoveLayer|RemoveOwlConcept|RemoveOwlDescription|RemoveOwlLogicalNames|RemoveOwlProperty|RemoveOwlRelationship|RemovePanelColorByValue|RemovePanelComment|RemovePanelEvents|RemovePanelOrnaments|RemovePanelSort|RemoveTask|RemoveVariable|REnableUserRecovery|ReplaceFrameFilter|RescheduleExistingJob|ResetAll|ResetPanelEvents|ResetPanelOrnaments|ResetTask|RetrieveInsightOrnament|RetrieveInsightPipeline|RetrievePanelColorByValue|RetrievePanelComment|RetrievePanelEvents|RetrievePanelOrnaments|RetrieveValue|RReplaceDatabaseCsvUpload|RSource|RunAliasMatch|RunAnomaly|RunAssociatedLearning|RunClassification|RunClustering|RunDataQuality|RunDescriptionGenerator|RunDocCosSimilarity|RunDocumentSummarization|RunLOF|RunLSILearned|RunMatrixRegression|RunMultiClustering|RunNumericalColumnSimilarity|RunNumericalCorrelation|RunNumericalModel|RunOutlier|RunPlan|RunPlaysheet|RunPlaysheetMethod|RunRandomForest|RunSentimentAnalysis|RunSimilarity|RunSimilarityHeat|RuntimeClassTest|RuntimeClassTestSingle|RunXRay|S3FileRetriever|S3ListBuckets|S3ListFiles|S3Uploader|Sample|SaveAsset|SaveInsight|SaveTaxScenario|ScheduleJob|SearchAppCollaborator|SearchAsset|Select|SelectTable|SemanticBlending|SemanticDescription|SendEmail|SetAppDescription|SetAppTags|SetCurrentFrame|SetFrameFilter|SetInsightCacheable|SetInsightConfig|SetInsightDescription|SetInsightGoldenLayout|SetInsightName|SetInsightOrnament|SetInsightTags|SetPanelFilter|SetPanelLabel|SetPanelPosition|SetPanelSheet|SetPanelSort|SetPanelView|SetSheetBackground|SetSheetConfig|SetSheetLabel|SharePointDriveSelector|SharePointFileRetriever|SharePointListFiles|SharePointSiteSelector|SharePointWebDavPull|Sheet|Sort|StandardDeviation|StartApp|StopApp|StoreValue|Sum|SuperParentValidator|SurveyMonkeyListSurveys|SyncApp|SyncAppFiles|SyncAppFilesO|SyncAppO|SyncAppWithLocalMaster|Task|TaskOptions|TaxIdsProcessor|TaxRetrieveValue|TaxRetrieveValue2|TextInput|TinkerCsvUpload|TinkerReplaceDatabaseCsvUpload|ToCsv|ToDatabase|ToExcel|ToLoaderSheet|ToNumericType|ToS3|ToTsv|ToTxt|ToUrlType|TransposeRows|UndeterminedPipeline|UnfilterFrame|UnfilterPanel|UniqueAverage|UniqueCount|UniqueGroupConcat|UniqueMean|UniqueSum|UnscheduleJob|UnsortPanel|Update|UpdateApp|UpdateAsset|UpdateForm|UpdateGraphPlanner2|UpdateInsight|UpdateInsightImage|UpdateNLPHistory|UpdatePanelComment|UpdatePlan|UpdateQueryData|UpdateSemanticData|UploadApp|UploadInsight|UploadUserFile|URLSource|UserDir|ValidatePy|ValidateR|VariableExists|Vector|Version|VizRecommendations|Week|WidgetT|With|XrayMetamodel|YEAR|rm|IsAppInsight|API|SynchronizeToR|AddLogicalName|GetLogicalNames|RemoveLogicalNames|AddMetaLinks|GetMetaLinks|RetrievePanelPosition|MetaSemanticSimilarity|raphPlan|RenameMosfitFile|LSADescriptionAdd|CreateCriteriaFromText|LSASpaceColumn|RunLSI)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pixel",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"begin": "<encode>",
+					"beginCaptures": {
+						"0": {
+							"name": "markup.punctuation.quote.beginning.pixel"
+						}
+					},
+					"end": "</encode>",
+					"endCaptures": {
+						"0": {
+							"name": "markup.punctuation.quote.beginning.pixel"
+						}
+					},
+					"name": "string.encode.pixel"
+				},
+				{
+					"name": "constant.character.escape.pixel",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.pixel"
+}
