@@ -1,7 +1,7 @@
 {
     "name": "pixel",
     "displayName": "Pixel",
-    "description": "A Pixel extension for VSCode",
+    "description": "A Pixel extension for VSCode to better highlight your recipes.",
     "version": "0.3.0",
     "publisher": "jgarabedian",
     "repository": {
