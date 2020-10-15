@@ -2,8 +2,12 @@
     "name": "pixel",
     "displayName": "Pixel",
     "description": "A Pixel extension for VSCode",
-    "version": "0.2.0",
+    "version": "0.1.0",
     "publisher": "jgarabedian",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jgarabedian/vscode-pixel.git"
+    },
     "engines": {
         "vscode": "^1.50.0"
     },
