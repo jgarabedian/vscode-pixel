@@ -1,6 +1,6 @@
 # Pixel README
 
-This extension allows for a user to easily read pixel syntax in VS Code
+This extension allows for a user to easily read pixel syntax in VS Code.
 
 ## To regex search the reactors for the proper format
 ```
@@ -8,6 +8,10 @@ This extension allows for a user to easily read pixel syntax in VS Code
 ```
 
 ## Features
+
+Working in SEMOSS? This allows for the highlighting of key reactors and terms within the Pixel language!
+
+
 
 Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 

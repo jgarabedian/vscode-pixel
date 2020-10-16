@@ -21,7 +21,7 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"],
-        //["<encode>", "</encode>"]
+        ["<encode>", "</encode>"]
     ],
     // symbols that can be used to surround a selection
     "surroundingPairs": [
@@ -31,6 +31,6 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"],
-        //["<encode>", "</encode>"]
+        ["<encode>", "</encode>"]
     ]
 }
